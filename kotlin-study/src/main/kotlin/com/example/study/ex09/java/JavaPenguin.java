@@ -1,6 +1,6 @@
 package com.example.study.ex09.java;
 
-public class JavaPenguin extends JavaAnimal {
+public class JavaPenguin extends JavaAnimal implements JavaFlyable, JavaSwimable {
     private final int wingCount;
 
     public JavaPenguin(String species) {
@@ -16,5 +16,15 @@ public class JavaPenguin extends JavaAnimal {
     @Override
     public int getLegCount() {
         return super.getLegCount() + this.wingCount;
+    }
+
+    @Override
+    public void act() {
+        JavaSwimable.super.act();
+        JavaFlyable.super.act();
+    }
+
+    @Override
+    public void fly() {
     }
 }
