@@ -7,13 +7,15 @@ spring:
       production: production-profile
   datasource:
     master:
-      jdbcUrl: jdbc:mariadb://localhost:3306/ex31?master=1
+      #jdbcUrl: jdbc:mariadb://localhost:3306/ex31?master=1
       #jdbcUrl: jdbc:mysql://localhost:13306/ex31
+      jdbcUrl: jdbc:mysql://localhost:33306/ex31
       username: root
       password: 1234
     slave:
-      jdbcUrl: jdbc:mariadb://localhost:3306/ex31?slave=1
+      #jdbcUrl: jdbc:mariadb://localhost:3306/ex31?slave=1
       #jdbcUrl: jdbc:mysql://localhost:23306/ex31
+      jdbcUrl: jdbc:mysql://localhost:33306/ex31
       username: root
       password: 1234
   jpa:
